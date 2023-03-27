@@ -1,6 +1,6 @@
 ### Purpose:
 
-The goal of this project is to create a Postgres database and ETL pipeline for a ficticious music streaming company Sparkify. As the hired data engineer,
+The goal of this project is to create a Postgres database and ETL pipeline for a fictitious music streaming company Sparkify. As the hired data engineer,
 I am tasked with defining fact and dimension tables for a star schema to be used in songplay and user analytics.  I am to create a data pipeline that 
 transfers data from files in two local directories into the created Postgres database using python and SQL.  The purpose of this database is to organize 
 the data from Sparkify's JSON files so that it can be queried easily to learn more about what songs their users are listening to.
