@@ -34,10 +34,10 @@ paid users, and most busiest days for listening.
   > 3. artists: artist_id, name, location, latitude, longitude
   > 4. time: start_time, hour, day, week, month, year, weekday
 
-> ETL
-> 1. Create songs and artists dimension tables by taking selected columns from songs data.
-> 2. Create users and time dimension tables by taking select columns from log data.
-> 3. Create songplays fact table with data from previously created tables and log data.
+#### ETL
+  > 1. Create songs and artists dimension tables by taking selected columns from songs data.
+  > 2. Create users and time dimension tables by taking select columns from log data.
+  > 3. Create songplays fact table with data from previously created tables and log data.
 
 ### Example Queries:
 
