@@ -1,9 +1,30 @@
 ## Project Summary
 
-A music streaming startup Sparkify has expanded and wants a data engineer to
+A fictitious music streaming company has expanded and wants a data engineer to
 move their datawarehouse to a data lake. Currently all their data resides in
-S3.  This project takes the data from S3, transforms the data into fact and
-dimension tables and stores it back on S3.
+S3 in JSON format.  As the data engineer, my task is to build an ETL pipeline 
+that extracts data stored in Amazon S3 in JSON format, process the data using 
+Apache Spark, and then load the data back onto S3 as partitioned parquet files.
+
+## Desired Schema for Data Model
+
+> ### Fact Table
+> 
+> 1. songplays:  songplay_id, start_time, user_id, level, song_id, artist_id, session_id, location, user_agent
+
+> ### Dimension tables
+> 1. users: user_id, first_name, last_name, gender, level
+> 2. songs:  song_id, title, artist_id, year, duration
+> 3. artists:  artist_id, name, location, lattitude, longitude
+> 4. time:  start_time, hour, day, week, month, year, weekday
+
+## Steps taken to complete project
+
+1. Create Spark session.
+2. Create a schema for a Spark dataframe to load song data from S3. 
+   Create Spark dataframe and load song data from S3 into dataframe.
+   This behaves as a staging table for the song data.
+3. 
 
 ## How to Run Script
 
