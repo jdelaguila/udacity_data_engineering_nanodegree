@@ -13,6 +13,7 @@ Apache Spark, and then load the data back onto S3 as partitioned parquet files.
 > 1. songplays:  songplay_id, start_time, user_id, level, song_id, artist_id, session_id, location, user_agent
 
 > ### Dimension tables
+> 
 > 1. users: user_id, first_name, last_name, gender, level
 > 2. songs:  song_id, title, artist_id, year, duration
 > 3. artists:  artist_id, name, location, lattitude, longitude
@@ -26,8 +27,13 @@ Apache Spark, and then load the data back onto S3 as partitioned parquet files.
    This behaves as a staging table for the song data.
 3. Using the SQL function of the SparkSession data was extracted from
    the song staging table to create two dataframes: artists, and songs.
-   These would serve as the dimension tables of the same name.
-4. In a similar manner, log data is extracted from S3 and 
+   These would serve as the dimension tables of the same name.  These 
+   tables are loaded back onto S3 as parquet files.
+4. In a similar manner, log data is extracted from S3 and processed to 
+   create the users, and time dimension tables. These tables are then 
+   loaded back onto S3 as parquet files.
+5. Song data and log data are combined to create the songplays table
+   which is then loaded back to S3 as a parquet file.
 
 ## How to Run Script
 
