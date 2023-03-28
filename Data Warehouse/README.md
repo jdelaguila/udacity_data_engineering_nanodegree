@@ -1,6 +1,29 @@
 ## Project Summary
 
-The music streaming startup, Sparkify has grown and wants to take their user and song data and processes to the cloud. Their data currently resides in S3, and as the data engineer, I am create an ETL pipeline that takes this data from S3, stages the data in redshift, and then transform this data into fact and dimension tables that will be useful for business queries.
+A fictitious music streaming company has data stored in Amazon S3.  My job as the data engineer is to take that data, load it onto an Amazon Redshift
+cluster as staging tables, then execute SQL statements on the staging tables to create fact and dimension tables for analytics on Amazon Redshift.
+
+## Desired Schema for Data Model
+
+> ### Fact Table
+>
+> 1. songplays:  songplay_id, start_time, user_id, level, song_id, artist_id, session_id, location, user_agent
+
+> ### Dimension Tables
+> 
+> 1. users:  user_id, first_name, last_name, gender, level
+> 2. songs:  song_id, title, artist_id, year, duration
+> 3. artists:  artist_id, name, location, lattitude, longitude
+> 4. time:  start_time, hour, day, week, month, year, weekday
+
+## Steps taken to complete project
+
+1. Boiler plate code was used to create the Redshift cluster programmatically.
+2. After the Redshift cluster was created I could load the data from S3 into staging tables on the cluster. Thus in this step, SQL statements were 
+   written to create the staging tables on the cluster. To verify the tabels were created, the Amazon Web Service console was used.
+3. Using the COPY command, the data from S3 was copied onto the staging tables.
+4. 
+
 
 ## Instructions to run scripts
 
