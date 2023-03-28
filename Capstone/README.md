@@ -91,8 +91,8 @@ analysis for the immigration data.
   </tr>
     </table>
     
-    With this data model, the key information from the immigration table can be analyzed and combined 
-    with city demographics and airport data to gain insight effectively and efficiently.
+With this data model, the key information from the immigration table can be analyzed and combined 
+with city demographics and airport data to gain insight effectively and efficiently.
     
 
 3. Build ETL pipeline.
