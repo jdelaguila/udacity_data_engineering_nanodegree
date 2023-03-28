@@ -124,7 +124,7 @@ def process_log_data(spark, input_data, output_data):
     time_table.write.partitionBy("year", "month").mode('overwrite').parquet(output_data + 'time_table/time.parquet')
 
     # read in song data to use for songplays table
-    song_data = input_data + 'song_data/A/A/*/*.json'
+    song_data = input_data + 'song_data/*/*/*/*.json'
     
     song_schema = StructType([
                         StructField("num_songs", IntegerType()),
