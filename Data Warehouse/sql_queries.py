@@ -162,7 +162,7 @@ user_table_insert = ("""
 
 song_table_insert = ("""
                     INSERT INTO songs (song_id, title, artist_id, year, duration)
-                    SELECT song_id,
+                    SELECT DISTINCT song_id,
                            title,
                            artist_id,
                            year,
@@ -172,7 +172,7 @@ song_table_insert = ("""
 
 artist_table_insert = ("""
                       INSERT INTO artists (artist_id, name, location, latitude, longitude)
-                      SELECT artist_id AS artist_id,
+                      SELECT DISTINCT artist_id AS artist_id,
                              artist_name AS name,
                              artist_location AS location,
                              artist_latitude AS latitude,
@@ -182,7 +182,7 @@ artist_table_insert = ("""
 
 time_table_insert = ("""
                     INSERT INTO time (start_time, hour, day, week, month, year, weekday)
-                    SELECT s.start_time AS start_time,
+                    SELECT DISTINCT s.start_time AS start_time,
                            EXTRACT(hour FROM s.start_time) AS hour,
                            EXTRACT(day FROM s.start_time) AS day,
                            EXTRACT(week FROM s.start_time) AS week,
