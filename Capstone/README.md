@@ -113,7 +113,8 @@ analysis for the immigration data.
     * process_state_data(spark, content): Takes lines from label description file and creates dataframe for state codes.
     * process_airport_data(spark): Reads airport file and filters only US airports.  Creates dataframe and drops redundant columns.
         Converts string representation of integers to integers.
-    * process_city_data(spark): Reads US city demographic information and converts string representations of integers to integers. Converts string representations of doubles to doubles.
+    * process_city_data(spark): Reads US city demographic information and converts string representations of integers to integers. 
+      Converts string representations of doubles to doubles.
     
   
 4. Run ETL with quality checks and write to parquet.
@@ -202,28 +203,31 @@ analysis for the immigration data.
     
 ##### The database needed to be accessed by 100+ people
 
-    This data could be loaded to Amazon S3 and later a Redshift cluster so permissions could be given and configured,
-    and data can be accessed and analyzed.
+    This data could be loaded to Amazon S3 and later a Redshift cluster so permissions could be given and 
+    configured, and data can be accessed and analyzed.
     
 #### Tools chosen for data model
     
-    The tools chosen for this project were pySpark, python, and jupyter notebooks.  pySpark is useful for larger datasets and 
-    was thus chosen for data exploration, cleaning, and data modeling.  The ease of use of these tools allows for deep data analysis
-    with minimal complexity.  jupyter notebooks were crucial for quick isolated evaluation for data exploration.
+    The tools chosen for this project were pySpark, python, and jupyter notebooks.  pySpark is useful for 
+    larger datasets and was thus chosen for data exploration, cleaning, and data modeling.  The ease of 
+    use of these tools allows for deep data analysis with minimal complexity.  Jupyter notebooks were 
+    crucial for quick isolated evaluation for data exploration.
     
 #### Frequency of Data Updates
 
-    The immigration data is aggregated on a monthly basis so the data for this model should be updated on a monthly basis.
+    The immigration data is aggregated on a monthly basis so the data for this model should be updated 
+    on a monthly basis.
     
 #### Using the Data Model
 
-    One use case for the data model could be to see how the immigrants come to the US in comparison with the immigrant population
-    of certain cities. When we take the number of Foreign-born (immigrants) from each city we can compare that with the number of 
-    immigrants who chose that city as their port of entry.
+    One use case for the data model could be to see how the immigrants come to the US in comparison 
+    with the immigrant population of certain cities. When we take the number of Foreign-born (immigrants) 
+    from each city we can compare that with the number of immigrants who chose that city as their port of entry.
     
    ![Data model query](./using_data_model_1.png)
    ![Output of data model query](./using_data_model_2.png) 
    
-    It seems that the cities with the highest Foreign-born population are also the most popular ports of entries for immigrants
-    in the year 2016.  With this query we see that we have successfully used the data model with the immigration table containing
-    3,096,313 records and the US cities table containing 2,891 records.
+    It seems that the cities with the highest Foreign-born population are also the most popular ports of 
+    entries for immigrants in the year 2016.  With this query we see that we have successfully used the 
+    data model with the immigration table containing 3,096,313 records and the US cities table containing 
+    2,891 records.
