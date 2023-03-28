@@ -95,7 +95,7 @@ With this data model, the key information from the immigration table can be anal
 with city demographics and airport data to gain insight effectively and efficiently.
     
 
-3. Build ETL pipeline.
+3.  Build ETL pipeline.
 
     Functions used in etl.py:
     
