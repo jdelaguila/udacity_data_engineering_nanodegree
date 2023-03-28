@@ -3,6 +3,10 @@
 A fictitious music streaming company has data stored in Amazon S3.  My job as the data engineer is to take that data, load it onto an Amazon Redshift
 cluster as staging tables, then execute SQL statements on the staging tables to create fact and dimension tables for analytics on Amazon Redshift.
 
+#### Song data format
+
+{"num_songs": 1, "artist_id": "ARJIE2Y1187B994AB7", "artist_latitude": null, "artist_longitude": null, "artist_location": "", "artist_name": "Line Renaud", "song_id": "SOUPIRU12A6D4FA1E1", "title": "Der Kleine Dompfaff", "duration": 152.92036, "year": 0}
+
 ## Desired Schema for Data Model
 
 > ### Fact Table
