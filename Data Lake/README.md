@@ -24,7 +24,10 @@ Apache Spark, and then load the data back onto S3 as partitioned parquet files.
 2. Create a schema for a Spark dataframe to load song data from S3. 
    Create Spark dataframe and load song data from S3 into dataframe.
    This behaves as a staging table for the song data.
-3. 
+3. Using the SQL function of the SparkSession data was extracted from
+   the song staging table to create two dataframes: artists, and songs.
+   These would serve as the dimension tables of the same name.
+4. In a similar manner, log data is extracted from S3 and 
 
 ## How to Run Script
 
