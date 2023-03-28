@@ -113,7 +113,7 @@ def process_log_data(spark, input_data, output_data):
     log_df = log_df.withColumn('hour', hour(log_df.start_time))
     
     # extract columns to create time table
-    df.createOrReplaceTempView("log_view_2")
+    log_df.createOrReplaceTempView("log_view_2")
     
     time_table = spark.sql("""
                            SELECT DISTINCT start_time, hour, day, week, weekday, year, month
