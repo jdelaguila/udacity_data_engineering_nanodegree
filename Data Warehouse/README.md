@@ -22,7 +22,8 @@ cluster as staging tables, then execute SQL statements on the staging tables to 
 2. After the Redshift cluster was created I could load the data from S3 into staging tables on the cluster. Thus in this step, SQL statements were 
    written to create the staging tables on the cluster. To verify the tabels were created, the Amazon Web Service console was used.
 3. Using the COPY command, the data from S3 was copied onto the staging tables.
-4. 
+4. Tables were then created for the data model according to the desired schema above.
+5. Using INSERT INTO, data is transferred from staging tables to the data model for later analytics.
 
 
 ## Instructions to run scripts
