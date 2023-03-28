@@ -93,10 +93,10 @@ analysis for the immigration data.
     
 With this data model, the key information from the immigration table can be analyzed and combined 
 with city demographics and airport data to gain insight effectively and efficiently.
-3. Build ETL pipeline.
 
-    Functions used in etl.py:
-    
+3. Build ETL pipeline.
+4.
+Functions used in etl.py:
     * data_qual_check(dataframe, table_name):  Checks to make sure tables are not empty and displays table schema
     * create_spark_session():  This function creates a spark session and returns it to be used in the rest of the etl.py script.
     * process_immigration_data(spark): Takes immigration data and makes it more readable and usable.
